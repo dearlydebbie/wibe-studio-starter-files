@@ -1,15 +1,14 @@
-
-
+// Add Themes as per your requirements
 export const dark = {
-	body: "#202020", //black shade
+	body: "#202020", // black shade
 	text: "#fff",
 	bodyRgba: "32,32,32",
 	textRgba: "255,255,255",
 
-	grey: "#bebebe", //grey shade
+	grey: "#bebebe", // grey shade
 
 	fontxs: "0.75em", //1em = 16px
-	fontsm: "0.075em",
+	fontsm: "0.875em",
 	fontmd: "1em",
 	fontlg: "1.25em",
 	fontxl: "2em",
@@ -17,5 +16,5 @@ export const dark = {
 	fontxxxl: "5em",
 	fontBig: "10em",
 
-  navheight: '5rem',
+	navHeight: "5rem",
 };
