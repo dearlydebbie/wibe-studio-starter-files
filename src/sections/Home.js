@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CoverVideo from '../components/CoverVideo';
+import Logo from '../components/Logo';
 
 
 
@@ -14,7 +15,7 @@ const Home = () => {
   return (
 		<Section>
 			<CoverVideo />
-			<h1>Logo</h1>
+			<Logo />
 			<h1>NavBar</h1>
 
 		</Section>
