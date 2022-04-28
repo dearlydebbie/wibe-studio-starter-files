@@ -118,7 +118,7 @@ const Right = styled.div`
 
 const About = () => {
 	return (
-		<Section id="fixed-target" className="about">
+		<Section data-scroll-section id="fixed-target" className="about">
 			<Title
 				data-scroll
 				data-scroll-speed="-2"
