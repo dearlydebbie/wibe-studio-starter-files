@@ -95,60 +95,60 @@ const NavBar = () => {
   };
 
   return (
-    <NavContainer
-      click={+click}
-      initial={{
-        y: "-100%",
-      }}
-      animate={{
-        y: 0,
-      }}
-      transition={{
-        duration: 2,
-        delay: 5,
-      }}
-    >
-      <MenuItems
-        drag="y"
-        dragConstraints={{
-          top: 0,
-          bottom: 70,
-        }}
-        dragElastic={0.05}
-        dragSnapToOrigin
-      >
-        <MenuBtn onClick={() => setClick(!click)}>Menu</MenuBtn>
-        <MenuItem
-          onClick={() => handleScroll("#home")}
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, Y: 0 }}
-        >
-          Home
-        </MenuItem>
-        <MenuItem
-          onClick={() => handleScroll(".about")}
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, Y: 0 }}
-        >
-          about
-        </MenuItem>
-        <MenuItem
-          onClick={() => handleScroll("#shop")}
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, Y: 0 }}
-        >
-          shop
-        </MenuItem>
-        <MenuItem
-          onClick={() => handleScroll("#new-arrival")}
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, Y: 0 }}
-        >
-          new arrival
-        </MenuItem>
-      </MenuItems>
-    </NavContainer>
-  );
+		<NavContainer
+			click={+click}
+			initial={{
+				y: "-100%",
+			}}
+			animate={{
+				y: 0,
+			}}
+			transition={{
+				duration: 2,
+				delay: 5,
+			}}
+		>
+			<MenuItems
+				drag="y"
+				dragConstraints={{
+					top: 0,
+					bottom: 70,
+				}}
+				dragElastic={0.05}
+				dragSnapToOrigin
+			>
+				<MenuBtn onClick={() => setClick(!click)}>Menu</MenuBtn>
+				<MenuItem
+					onClick={() => handleScroll("#home")}
+					whileHover={{ scale: 1.1, y: -5 }}
+					whileTap={{ scale: 0.9, Y: 0 }}
+				>
+					Home
+				</MenuItem>
+				<MenuItem
+					onClick={() => handleScroll(".about")}
+					whileHover={{ scale: 1.1, y: -5 }}
+					whileTap={{ scale: 0.9, Y: 0 }}
+				>
+					about
+				</MenuItem>
+				<MenuItem
+					onClick={() => handleScroll("#shop")}
+					whileHover={{ scale: 1.1, y: -5 }}
+					whileTap={{ scale: 0.9, Y: 0 }}
+				>
+					shop
+				</MenuItem>
+				<MenuItem
+					onClick={() => handleScroll("#new-arrival")}
+					whileHover={{ scale: 1.1, y: -5 }}
+					whileTap={{ scale: 0.9, Y: 0 }}
+				>
+					new arrival
+				</MenuItem>
+			</MenuItems>
+		</NavContainer>
+	);
 };
 
 export default NavBar;

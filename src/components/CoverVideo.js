@@ -97,14 +97,9 @@ const item = {
 
 const CoverVideo = () => {
 	return (
-		<VideoContainer>
+		<VideoContainer data-scroll-section>
 			<DarkOverlay />
-			<Title
-				data-scroll-section
-				variants={container}
-				initial="hidden"
-				animate="show"
-			>
+			<Title variants={container} initial="hidden" animate="show">
 				<div>
 					<motion.h1
 						variants={item}
@@ -145,7 +140,7 @@ const CoverVideo = () => {
 					data-scroll-delay="0.04"
 					data-scroll-speed="2"
 				>
-					Inspire. Create. Believe
+					Inspire. Create. Belive
 				</motion.h2>
 			</Title>
 			<video src={MainVideo} type="video/mp4" autoPlay muted loop />
