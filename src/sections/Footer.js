@@ -170,11 +170,11 @@ const Footer = () => {
 					>
 						Made with &hearts; by &nbsp;
 						<a
-							href="https://youtube.com/codebucks"
+							href="https://github.com/dearlydebbie"
 							target="_blank"
 							rel="noreferrer"
 						>
-							CodeBucks
+							Deborah
 						</a>
 					</span>
 				</Bottom>
