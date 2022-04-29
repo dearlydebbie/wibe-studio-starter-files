@@ -1,44 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled.div`
-position: absolute;
-top: 1rem;
-left: 1rem;
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
 
-width: 100%;
-color: ${props => props.theme.text};
-z-index: 5;
+	width: 100%;
+	color: ${(props) => props.theme.text};
+	z-index: 5;
 
-a{
-  display: flex;
-  align-items: flex-end;
-}
+	a {
+		display: flex;
+		align-items: flex-end;
+	}
 
+	svg {
+		width: 4rem;
+		height: auto;
+		overflow: visible;
+		stroke-linejoin: round;
+		stroke-linecap: round;
 
-svg{
-  width: 4rem;
-  height: auto;
-  overflow: visible;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-
-  g{
-    path{
-      stroke: ${props => props.theme.text};
-    }
-  }
-
-}
+		g {
+			path {
+				stroke: ${(props) => props.theme.text};
+			}
+		}
+	}
 `;
 
 const Text = styled(motion.span)`
 	font-size: ${(props) => props.theme.fontlg};
 	color: ${(props) => props.theme.text};
-  padding-bottom: 0.5rem;
+	padding-bottom: 0.5rem;
 `;
 
 const textVariants = {
@@ -51,34 +48,32 @@ const textVariants = {
 		x: -5,
 
 		transition: {
-			duration: 2,
-			delay: 2,
+			duration: 2, // 2
+			delay: 5,
 			ease: "easeInOut",
 		},
 	},
 };
 
-
 const pathVariants = {
-  hidden: {
-    opacity: 0,
-    pathLength: 0,
-    },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
+	hidden: {
+		opacity: 0,
+		pathLength: 0,
+	},
+	visible: {
+		opacity: 1,
+		pathLength: 1,
 
-      transition: {
-        duration: 2,
-        ease: 'easeInOut'
-      }
-
-  },
-
-}
+		transition: {
+			duration: 2,
+			delay: 3,
+			ease: "easeInOut",
+		},
+	},
+};
 
 const Logo = () => {
-  return (
+	return (
 		<Container>
 			<Link to="/">
 				<svg
@@ -100,11 +95,11 @@ const Logo = () => {
 					</g>
 				</svg>
 				<Text variants={textVariants} initial="hidden" animate="visible">
-					Wibe Studios
+					Wibe Studio
 				</Text>
 			</Link>
 		</Container>
 	);
-}
+};
 
-export default Logo
+export default Logo;
