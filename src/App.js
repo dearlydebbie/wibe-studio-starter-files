@@ -2,22 +2,31 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/GlobalStyles";
 import { dark } from "./styles/Themes";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import { useRef } from 'react';
-import 'locomotive-scroll/dist/locomotive-scroll.css'
+import { useEffect, useRef, useState } from "react";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 import Home from "./sections/Home";
 import { AnimatePresence } from "framer-motion";
 import About from "./sections/About";
 import Shop from "./sections/Shop";
+import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import Banner from "./sections/Banner";
 import NewArrival from "./sections/NewArrival";
 import Footer from "./sections/Footer";
-
+import Loader from "./components/Loader";
 
 function App() {
-  const containerRef = useRef(null);
+	const containerRef = useRef(null);
 
-  return (
+	const [loaded, setLoaded] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setLoaded(true);
+		}, 3000);
+	}, []);
+
+	return (
 		<>
 			<GlobalStyles />
 
@@ -26,6 +35,12 @@ function App() {
 					options={{
 						smooth: true,
 						// ... all available Locomotive Scroll instance options
+						smartphone: {
+							smooth: true,
+						},
+						tablet: {
+							smooth: true,
+						},
 					}}
 					watch={
 						[
@@ -36,6 +51,8 @@ function App() {
 					}
 					containerRef={containerRef}
 				>
+					<AnimatePresence>{loaded ? null : <Loader />}</AnimatePresence>
+					<ScrollTriggerProxy />
 					<AnimatePresence>
 						<main className="App" data-scroll-container ref={containerRef}>
 							<Home />
